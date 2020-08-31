@@ -56,11 +56,8 @@ CSS盒模型本质上是一个封装周围的HTML元素的盒子，
 ```
 什么是标准盒模型和IE盒模型？
 
-W3C标准盒模型：
-盒子的大小为盒子的内容content大小。
-
-IE盒模型：
-盒子的大小为盒子的内容content，加上内边距和边框的大小，即 width = content + padding + border。
+W3C标准盒模型：盒子的大小为盒子的内容content大小。
+IE盒模型：盒子的大小为盒子的内容content，加上内边距和边框的大小，即 width = content + padding + border。
 
 使用<!DOCTYPE html>来声明使用标准盒模型，
 或者使用 box-sizing: content-box 选择标准盒模型
@@ -69,11 +66,13 @@ IE盒模型：
 
 ```
 什么是BFC？
+
 BFC(Block Formatting Context)块级格式化上下文，是一种边距重叠解决方案。
 在整个文档流里，触发了BFC特性的元素，就像系统里的虚拟机一样。虚拟机里的东西，相对于承载虚拟机的系统来说，
 是完全隔离开的。
 
 如何触发BFC？
+
 1、根元素
 2、float值不为none
 3、overflow值不为visible

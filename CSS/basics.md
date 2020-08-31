@@ -56,13 +56,8 @@ CSS盒模型本质上是一个封装周围的HTML元素的盒子，
 ```markdown
 > 什么是标准盒模型和IE盒模型？
 
-> W3C标准盒模型：
-
-  盒子的大小为盒子的内容content大小。
-
-> IE盒模型：
-
-  盒子的大小为盒子的内容content，加上内边距和边框的大小，即 width = content + padding + border。
+ W3C标准盒模型：盒子的大小为盒子的内容content大小。
+ IE盒模型：盒子的大小为盒子的内容content，加上内边距和边框的大小，即 width = content + padding + border。
 
 使用<!DOCTYPE html>来声明使用标准盒模型，
 或者使用 box-sizing: content-box 选择标准盒模型

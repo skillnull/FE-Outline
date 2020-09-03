@@ -45,6 +45,13 @@ CSS 选择器规定了 CSS 规则会被应用到哪些元素上。
 
 ```
 
+```markdown
+> 浏览器是如何解析CSS选择器的？
+
+CSS选择器的读取顺序是从右向左。
+从右向左读取，会在一开始就过滤掉大量不符合条件的节点，从而提升性能。
+```
+
 #### CSS盒子模型
 ```markdown
 > 什么是CSS盒子模型？
@@ -74,7 +81,7 @@ BFC(Block Formatting Context)块级格式化上下文，是一种边距重叠解
 > 如何触发BFC？
 
 1、根元素
-2、float值不为none
+2、float值不为nones
 3、overflow值不为visible
 4、position为absolute或fixed
 ```

@@ -80,8 +80,19 @@ BFC(Block Formatting Context)块级格式化上下文，是一种边距重叠解
 
 > 如何触发BFC？
 
-1、根元素
-2、float值不为nones
-3、overflow值不为visible
-4、position为absolute或fixed
+1、根元素（<html>）
+2、浮动元素（元素的 float 不是 none）
+3、overflow 值不为 visible 的块元素
+4、绝对定位元素（元素的 position 为 absolute 或 fixed）
+5、contain 值为 layout、content 或 paint 的元素
+6、display 值为 grid、inline-grid、flow-root、flex、inline-flex、inline-block、table、table-cell、table-caption 的元素
+7、多列容器（元素的 column-count 或 column-width 不为 auto，包括 column-count 为 1）
+8、column-span 为 all 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中
+
+> BFC解决了什么问题？
+
+1.避免外边距折叠
+2.清除浮动
+3.阻止普通文档流元素被浮动元素覆盖
+4.自适应两栏布局
 ```

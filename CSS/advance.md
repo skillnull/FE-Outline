@@ -28,3 +28,15 @@
   - ::after 创建一个伪元素，将其成为被匹配选中的元素的最后一个子元素。
   
   注：::before和::after生成的伪元素包含在元素格式框内，因此不能引用在替换元素上，比如img、video、embed、iframe、audio、option、canvas、object、applet、br、input
+  
+> 为什么要初始化CSS样式？
+  
+  因为不同浏览器对有些标签对默认值不同，不对CSS进行初始化，往往会出现不同浏览器之间的页面显示差异。但是样式初始化会对SEO有一定影像。
+  
+> absolute 的 containing block(容器块: 相对父元素如何定位) 计算方式跟正常流有什么不同？  
+
+  absolute 会先向上找到第一个 position 不为 static 或 fixed 的祖先元素；
+  如果该祖先元素的display为块级元素，则容器块为该块级元素的padding box；
+  如果该祖先元素的display为行内元素，则容器块为该祖先元素内所有行内元素的padding box；
+  
+  正常流的容器块是其最近的块级元素的content box。

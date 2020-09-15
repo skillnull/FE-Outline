@@ -13,7 +13,13 @@
    - 是否是继承属性(株连性)
      + display不是继承属性，display:none; 元素及子元素都会消失
      + visibility是继承属性，visibility: hidden; 的子元素若使用了 visibility: visible; 则子孙元素又会显现出来
-     
+
+  
+> visibility: collapse 在不同浏览器有什么区别？
+  
+  - Chrome 中 等同于 hidden
+  - Firefox、Opera、IE等同于 display: none
+       
 > CSS3新增伪类有哪些？
     
   - p:first-of-type 匹配第一个出现的p元素，而不管其在兄弟内的位置如何
@@ -40,3 +46,8 @@
   如果该祖先元素的display为行内元素，则容器块为该祖先元素内所有行内元素的padding box；
   
   正常流的容器块是其最近的块级元素的content box。
+
+> 设置元素浮动后，该元素的 display 值是多少？
+  
+  自动变成 display: block;
+  

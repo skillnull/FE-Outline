@@ -11,6 +11,9 @@
     - [CSS常见面试题](/CSS/advance.md#CSS常见面试题)
     
  * 高阶 
+   - [性能篇](/CSS/high-order.md#性能篇)
+   - [动画篇](/CSS/high-order.md#动画篇)
+   - [其他](/CSS/high-order.md#其他)
     
 > HTML篇
 

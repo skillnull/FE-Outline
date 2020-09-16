@@ -51,3 +51,16 @@
   
   自动变成 display: block;
   
+> 清除浮动有哪些方法，各有什么优缺点？
+  
+  - clear属性 
+    `<div clss="clear"></div> .clear{clear:both}`
+    优点：简单、兼容性好
+    缺点：添加无语意html元素，不利于代码语意化
+    
+  -  触发BFC
+     优点：触发BFC的方式多种多样
+     缺点：1、float触发BFC会引父容器起长度变短
+          2、overflow触发BFC会影响滚动条
+          3、position触发BFC会该变元素定位方式
+          4、display触发BFC在低版本IE上存在兼容问题

@@ -64,3 +64,11 @@
           2、overflow触发BFC会影响滚动条
           3、position触发BFC会该变元素定位方式
           4、display触发BFC在低版本IE上存在兼容问题
+          
+> link 与 @import 的区别
+
+  - link 是 HTML 方式，@import 是 CSS 方式   
+  - link 最大限度支持并行下载，@import 嵌套导致串行下载，出现文档样式短暂失效(FOUC)
+  - link 可以通过 rel 指定候选样式
+  - 浏览器对 link 支持早于 @import，可以使用 @import 对老浏览器隐藏样式
+  - @import 必须在样式规则之前

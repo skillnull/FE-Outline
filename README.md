@@ -14,15 +14,19 @@
    - [性能篇](/CSS/high-order.md#性能篇)
    - [动画篇](/CSS/high-order.md#动画篇)
    - [其他](/CSS/high-order.md#其他)
+   
+> JavaScript篇
+ 
+ * 基础
+    - [JavaScript简介](/JavaScript/basic.md#JavaScript简介)
     
+ * 进阶
+ 
+ * 高阶    
+ 
 > HTML篇
 
  * 基础
  * 进阶
  * 高阶
 
-> JavaScript篇
- 
- * 基础
- * 进阶
- * 高阶

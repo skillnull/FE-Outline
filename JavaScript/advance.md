@@ -160,4 +160,54 @@
           
 
 > 节流和防抖     
-                           
+
+  + 函数节流（throttle）
+    
+    > 高频事件触发，但在n秒内只会执行一次。
+    
+    ```javascript
+    function throttle(fn, gap = 500) {
+      // 通过闭包保存一个标记
+      let flag = true 
+      return function() {
+        if (!flag) return
+        flag = false
+        setTimeout(()=>{
+          fn.apply(this, arguments)
+          flag = true
+        }, gap)
+      }
+    }
+    
+    function hello(e) {
+      console.log(e.target)
+    }
+    
+    window.addEventListener('resize', throttle(hello))
+    ```                        
+                            
+  + 函数防抖（debounce）
+    
+    > 在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。  
+     
+    ```javascript
+    function debounce(fn, gap = 500) {
+      // 存放定时器
+      let timeout = null
+      return function() {
+        clearTimeout(timeout)
+        timeout = setTimeout(()=>{
+          fn.apply(this, arguments)
+        }, gap)        
+      }
+    }
+    
+    function hello() {
+      console.log('hello')
+    }
+    
+    const input_list = document.getElementsByTagName('input')
+    input_list && input_list.length > 0 && input_list.map((item)=>{
+      item.addEventListener('change', debounce(hello))
+    })
+    ```                                              

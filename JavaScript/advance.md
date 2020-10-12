@@ -157,3 +157,7 @@
           Object.setPrototypeOf(B.prototype, A.prototype)
           // B 继承 A 的静态属性
           Object.setPrototypeOf(B, A)
+          
+
+> 节流和防抖     
+                           

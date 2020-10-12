@@ -88,7 +88,7 @@
            function Super() {
                 this.name = 'exercise'
            }       
-           Super.prototype.say = function9) {
+           Super.prototype.say = function() {
                 console.log('hello')
            }
            function Sub() {

@@ -12,7 +12,7 @@
     
  * 高阶 
    - [性能篇](/CSS/high-order.md#性能篇)
-   - [动画篇](/CSS/high-order.md#动画篇)
+   - [动画篇](/CSS/high-order.md#动画篇) 
    - [其他](/CSS/high-order.md#其他)
    
 > JavaScript篇
@@ -34,4 +34,6 @@
 
 > 其他篇
   
+  - [TCP三次握手](/Others.md#TCP三次握手)
   - [重绘和回流](/Others.md#重绘和回流)
+  - [性能优化](/Others.md#性能优化)

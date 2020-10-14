@@ -18,7 +18,7 @@
 > JavaScript篇
  
  * 基础
-    - [JavaScript简介](/JavaScript/basic.md#JavaScript简介)
+    - [JavaScript简介](/JavaScript/basics.md#JavaScript简介)
     
  * 进阶
  

@@ -211,3 +211,19 @@
       item.addEventListener('change', debounce(hello))
     })
     ```                                              
+    
+> setTimeout、Promise、Async/Await 的区别
+
++ setTimeout
+     
+     setTimeout的回调函数放到宏队列里，等到执行栈清空以后执行。
+     
++ Promise
+   
+     Promise本身是同步的立即执行函数，当在执行器中执行 reslove 和 reject 的时候，此时是异步操作，
+     会先执行 then/catch 等，当主栈完成时，才会调用 reslove/reject 方法中存放的方法。
+     
++ async
+
+     async 函数返回一个 Promise 对象，当函数执行的时候，一旦遇到 await 就会先返回，等到触发的异步操作
+     完成，再执行函数体内后面的语句。可以理解为，是让出了线程，跳出了 async 函数体。

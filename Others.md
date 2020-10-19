@@ -120,3 +120,13 @@
    - 服务器推送
              
              HTTP2 可以对一个客户端请求发送多个响应。               
+             
+             
+#### webpack热更新HMR原理 
+
+  + 1、调用 webpack 的 api 对文件系统 watch，发现有变更则重新打包，保存到内存中
+  + 2、devServer 通过 webSocket 通知浏览器文件发生变更             
+  + 3、webpack-dev-server/client 接收到服务端消息做出响应           
+  + 4、webpack 接收到新的 hash 值验证并请求模块代码
+  + 5、HotModuleReplacement.runtime 对模块进行热更新           
+             

@@ -91,6 +91,11 @@
 
   > 使用 HTTP2 
     
+   + 如何使用HTTP2：nginx server 配置
+     server {
+        listen 443 ssl http2;
+     }
+    
    + HTTP2 相比 HTTP1.1 有如下几个优点：
              
    - 解析速度快

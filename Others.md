@@ -134,4 +134,9 @@
   + 3、webpack-dev-server/client 接收到服务端消息做出响应           
   + 4、webpack 接收到新的 hash 值验证并请求模块代码
   + 5、HotModuleReplacement.runtime 对模块进行热更新           
-             
+       
+#### 为什么JS是单线程而不是多线程？
+
+   JS的主要用途是与用户互动，以及操作DOM，单线程可以避免带来复杂的同步问题。
+   假定JS是多线程，两个线程同时操作一个DOM节点，则会出现问题。             
+   

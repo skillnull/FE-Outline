@@ -10,6 +10,19 @@
  
   - typeof
   - instanceof
+  - Object.prototype.toString.call()
+    
+    常用于判断浏览器内置对象。
+    ```javascript
+        Object.prototype.toString.call('An') // "[object String]"
+        Object.prototype.toString.call(1) // "[object Number]"
+        Object.prototype.toString.call(Symbol(1)) // "[object Symbol]"
+        Object.prototype.toString.call(null) // "[object Null]"
+        Object.prototype.toString.call(undefined) // "[object Undefined]"
+        Object.prototype.toString.call(function(){}) // "[object Function]"
+        Object.prototype.toString.call({name: 'An'}) // "[object Object]"
+    ```
+    
   - constructor
        
      ```js

@@ -255,3 +255,27 @@
     - websocket 双向通信    
     - node 转发
     
+>  国际化中时间时区怎么处理，冬令时夏令时处理
+
+    1、GMT（前世界标准时间），UTC（现世界标准时间）
+    2、夏令时（DST），冬令时（标准时间）
+    3、国际时间处理
+    
+   ```js
+       function getTimesByZone () {
+          // 获取本地时间
+          let date = new Date()
+          // 得到 1970年1月1日 到现在到秒数
+          let local = date.getTime()
+          // 获取本地时间与 GMT 时间的偏移差
+          let offset = date.getTimezoneOffset() * 60000
+          // 获取本地时区
+          let localUTC = date.getTimezoneOffset() / 60
+          // 得到现在的格林威治时间
+          let UTCTime = localUTC > 0 ? parseInt(local - offset) : parseInt(local + offset)
+          // 得到时区的绝对值
+          let localTime = UTCTime + 60 * 1000 * 60 * Math.abs(localUTC)
+          console.log(`${localUTC}时区的时间是：${new Date(localUTC).toLocaleString()}`)
+          return localTime
+       }
+   ```

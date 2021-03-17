@@ -33,3 +33,40 @@
 
     - 服务端压力大
     - 代码复杂度增加            
+    
+> 表单回退劫持
+
+   1、监听浏览器刷新事件
+        
+   ```js
+      // 监听刷新或关闭事件
+      window.onbeforeunload = e => {
+        // 使用字段进行控制
+        if (!flag) {
+          return 
+        }
+        // 阻止默认事件
+        e.preventDefault()
+      }
+      // 取消刷新或关闭事件的监听
+      window.onbeforeunload = null
+   ```
+
+   2、点击浏览器前进或回退按钮
+   
+   ```javascript
+      window.on('popstate', ()=>{
+        // TODO
+      })
+   ```
+
+   3、路由守卫
+   
+   ```javascript
+      // beforeRouterEnter 组件第一次被渲染时调用
+      // beforeRouterUpdate 路由改变但组件被复用时调用
+      // 导航离开组件时调用
+      beforRouterLeave(to, form, next) {
+        // TODO
+      }
+   ```
